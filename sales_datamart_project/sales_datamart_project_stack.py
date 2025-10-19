@@ -49,7 +49,7 @@ class LambdaStack(core.Stack):
             code=my_lambda_code,
             handler="lambda_function.lambda_handler",  # Replace with your handler function
             environment=env_vars,
-            role=Role.from_role_arn(self, 'lambdarole1', role_arn=f'arn:aws:iam::{account_id}:role/AWSLambdaV4'),
+            role=Role.from_role_arn(self, 'lambdarole1', role_arn=f'arn:aws:iam::{account_id}:role/AWSLambdarolev3'),
             memory_size=128,
             function_name='dehlive-yearly-legal-compliance-job-csv-parquet-paritioned-cdk',
             timeout=core.Duration.seconds(300)
